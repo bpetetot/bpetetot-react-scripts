@@ -35,7 +35,9 @@ module.exports = function(
   const useYarn = fs.existsSync(path.join(appPath, 'yarn.lock'));
 
   // Copy over some of the devDependencies
-  appPackage.dependencies = appPackage.dependencies || {};
+  appPackage.dependencies = {
+    'redux': '^3.7.0'
+  };
 
   // Setup the script rules
   appPackage.scripts = {
